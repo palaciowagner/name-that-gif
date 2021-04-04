@@ -25,7 +25,7 @@ jobs:
       - name: Setup Deno
         uses: denolib/setup-deno@v2
         with:
-          deno-version: ${{ matrix.deno }} # tests across multiple Deno versions
+          deno-version: "v1.x" # tests across multiple Deno versions
 
       - name: Cache Dependencies
         run: deno cache deps.ts
