@@ -1,7 +1,10 @@
-import { serve } from "./deps.ts";
-const s = serve({ port: 8000 });
-console.log("http://localhost:8000/");
+import { serve, Server } from "./deps.ts";
 
-for await (const req of s) {
-  req.respond({ body: "Hello World\n" });
+const startServer = async (): Promise<Server> => {
+  const server = await serve({ port: 8000 });
+  console.log("Server is up at >>>> http://localhost:8000/");
+  return server
 }
+
+export default startServer
+
