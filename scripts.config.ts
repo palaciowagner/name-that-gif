@@ -17,7 +17,7 @@ const config: DenonConfig = {
       "lock": "lock.json",
     },
     "start:ci": {
-      cmd: "deno run --allow-net index.ts",
+      cmd: "deno run --allow-net --allow-env index.ts",
       desc: "run my index.ts file",
       "lock": "lock.json",
     },
