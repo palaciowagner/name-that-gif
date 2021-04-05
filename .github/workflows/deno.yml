@@ -27,7 +27,9 @@ jobs:
         uses: denolib/setup-deno@v2
         with:
           deno-version: "v1.x" # tests across multiple Deno versions
-
+      - name: Install Denon
+        run: deno install -qAf --unstable https://deno.land/x/denon/denon.ts 
+          
       - name: Cache Dependencies
         run: denon cache:deps
 
