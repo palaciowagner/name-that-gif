@@ -6,6 +6,10 @@ const config: DenonConfig = {
     format: {
       cmd: "deno fmt && deno lint --unstable",
     },
+    "cache:deps": {
+      cmd: "deno cache deps.ts",
+      desc: "cache deno dependencies",
+    },
     "start:local": {
       cmd: "denon format && deno run --allow-net index.ts",
       desc: "run my index.ts file",
@@ -21,6 +25,7 @@ const config: DenonConfig = {
       cmd: "deno test -A",
       desc: "run all tests",
     },
+    
   },
 };
 
